@@ -80,7 +80,8 @@ async def run_checker(event):
 
     file_input = document.querySelector('input[type="file"]')
     files = list(file_input.files)
-    checker_name = document.getElementById("select")
+    checker_name = document.getElementById("select").value.split(":")[0]
+    print(checker_name)
 
     output_capture = io.StringIO()
     original_stdout = sys.stdout
